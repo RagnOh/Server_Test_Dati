@@ -4,20 +4,20 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\SensorReading;
+use App\Models\Temperatura;
 
 class SensorReadingController extends Controller
 {
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'sensor_id' => 'required|string',
-            'temperature' => 'required|numeric',
-            
+        $request->validate([
+            'temperatura' => 'required|numeric'
         ]);
 
-        $reading = SensorReading::create($data);
+        $temp = new Temperatura();
+        $temp->valore = $request->temperatura;
+        $temp->save();
 
-        return response()->json(['message' => 'Reading saved', 'data' => $reading], 201);
+        return response()->json(['message' => 'Dati salvati']);
     }
 }
