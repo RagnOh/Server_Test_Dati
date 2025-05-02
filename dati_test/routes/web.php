@@ -7,4 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/sensor-readings', [SensorReadingController::class, 'store']);
+Route::post('/temperatura', [SensorReadingController::class, 'store']);
+
+Route::get('/ping', function () {
+    return response()->json(['pong' => true]);
+});
