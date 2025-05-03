@@ -11,7 +11,7 @@ class SensorReadingController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'temperatura' => 'required|numeric'
+            'valore' => 'required|array'
         ]);
 
         $temp = new Temperatura();

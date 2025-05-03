@@ -9,11 +9,12 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('temperaturas', function (Blueprint $table) {
+        Schema::create('sensors', function (Blueprint $table) {
             $table->id();
-            $table->float('valore');
+            $table->unsignedBigInteger('device_id');
+            $table->json('data');
             $table->timestamps();
         });
     }
@@ -23,7 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('value');
-        
+        Schema::dropIfExists('sensors');
     }
 };

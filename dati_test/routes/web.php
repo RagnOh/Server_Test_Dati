@@ -7,8 +7,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/temperatura', [SensorReadingController::class, 'store']);
+Route::middleware([
+  'auth:sanctum',
+  config( key: 'jetstream.auth_session'),
+  'verified'
+  ])->group (function () {
+    Route:: get ( '/dashboard', function () {
+       return view(  'dashboard');
+})->name ( 'dashboard');
+});
 
+//Route::get('devices', [DeviceController::class, 'index'])->name('devices.index');
+
+Route::post('/devices/{device}/sensor', [SensorController::class, 'store']);
 Route::get('/ping', function () {
     return response()->json(['pong' => true]);
 });
