@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema:: create ('devices', function (Blueprint $table) {
              $table->id(); 
-             $table-›unsignedBigInteger ("usgr_id");
-             $table-›string( ' name');
-             $table-›string( 'device_type');
-             $table-›string('device_identifier');
-             $table-timestamps();
-             $table->foregin('user_id')->references('id')->on('users');
+             $table->unsignedBigInteger("user_id");
+             $table->string( 'name');
+             $table->string( 'device_type');
+             $table->string('device_identifier');
+             $table->timestamps();
+             $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
