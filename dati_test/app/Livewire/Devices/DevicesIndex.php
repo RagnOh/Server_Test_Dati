@@ -3,11 +3,16 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Device;
 
 class DevicesIndex extends Component
 {
     public function render()
     {
-        return view('livewire.devices.devices-index');
+        $devices = Device::with('user')->paginate(10); // Eager load relazione con User
+
+        return view('livewire.devices.devices-index', [
+            'devices' => $devices,
+        ]);
     }
 }
