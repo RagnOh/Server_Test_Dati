@@ -17,7 +17,7 @@ Route::middleware([
 })->name ( 'dashboard');
 });
 
-//Route::get('devices', [DeviceController::class, 'index'])->name('devices.index');
+Route::get('devices', [DeviceController::class, 'index'])->name('devices.index');
 
 Route::post('/devices/{device}/sensor', [SensorController::class, 'store']);
 Route::get('/ping', function () {
