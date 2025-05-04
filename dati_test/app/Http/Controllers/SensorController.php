@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Device;
+use App\Models\Sensor;
 
 class SensorController extends Controller
 {
@@ -13,7 +15,7 @@ class SensorController extends Controller
         $device = Device::find($deviceId);
         $sensor = new Sensor([
             'device_id' => $deviceId,
-            'data'
+            'data' => json_encode($request->data)
         ]);
         $sensor->save();
         return response()->json([

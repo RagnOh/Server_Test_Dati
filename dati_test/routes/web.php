@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\SensorReadingController;
+use App\Http\Controllers\SensorController;
 
 Route::get('/', function () {
     return view('welcome');
