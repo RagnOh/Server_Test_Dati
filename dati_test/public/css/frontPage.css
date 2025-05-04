@@ -1,0 +1,193 @@
+
+.content{
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar-brand{
+  color: white;
+  text-align: center;
+  justify-content: space-between;
+  margin-left: 0px;
+  
+}
+
+
+
+.btn-outline-light{
+
+  border-radius: 30px;
+  padding: 12px 15px 11px;
+  line-height: 11px;
+  transition: opacity .2s linear 0s;
+}
+
+.btn-crea{
+  margin-left: 16px;
+}
+
+.bg-primary{
+  margin-top: 100px;
+}
+
+.content-container{
+
+box-sizing: border-box;
+display: flex;
+direction: ltr;
+flex-direction: row;
+height: 100%;
+justify-content: left;
+padding-top: 20vw ; 
+padding-left: 2.7vw ; 
+position: absolute;
+top: 0;
+width: 80%;
+object-fit: cover;
+z-index: 3;
+}
+
+
+
+h1.title{
+  
+color: rgba(255, 255, 237, 0.972);
+
+}
+
+.motto{
+  color: rgba(255, 255, 237, 0.972);
+ 
+  
+/**/
+}
+
+
+.description{
+  font-size: 22px;
+}
+
+.pricing{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+    max-width: 100%;
+    background-color: #F9F8F7;
+}
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+th, tr {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.what_site_do{
+  height: 55vw; /* Altezza desiderata */
+  background-color: #0d2423;
+}
+
+.supported_exchanges{
+  height: 40vw; /* Altezza desiderata */
+  background-color: #6a7d7c;
+
+}
+
+
+
+.format1{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+   padding-top: 5vw;
+   padding-left: 3vw;
+    max-width: 60%;
+}
+
+.info{
+  
+  color: white;
+}
+
+.format2{
+  display: flex;
+    justify-content: left;
+    align-items: left;
+   padding-top: 8vw;
+   padding-left: 3vw;
+    max-width: 50%;
+}
+
+
+
+.intro-exchanges{
+  padding-top: 3vw;
+  padding-left: 3vw;
+  padding-bottom: 3vw;
+  font-size: 23px;
+  color: white;
+}
+
+.exchangeName{
+  padding-top: 3vw;
+  padding-left: 3vw;
+  font-size: 23px;
+  color: white;
+}
+
+
+
+  .panel-heading {
+    color: #fff ;
+    background-color: #f4511e ;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white ;
+  }
+
+  .rounded-lg {
+    border-radius: 1rem ;
+  }
+  
+  .text-small {
+    font-size: 0.9rem ;
+  }
+  
+  .custom-separator {
+    width: 5rem;
+    height: 6px;
+    border-radius: 1rem;
+  }
+  
+  .text-uppercase {
+    letter-spacing: 0.2em;
+  }
+  
+  /*
+  *
+  * ==========================================
+  * FOR DEMO PURPOSES
+  * ==========================================
+  *
+  */
+  
+  
+
+  .pricing{
+    
+    width:100%;
+  display: flex;
+  justify-content: center;
+
+  }
