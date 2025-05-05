@@ -21,6 +21,8 @@ Route::middleware([
 
 Route::get('devices', [DeviceController::class, 'index'])->name('devices.index');
 
+Route::get('/sensor', [DeviceController::class, 'viewSensor'])->name('sensor.index');
+
 Route::post('/devices/{device}/sensor', [SensorController::class, 'store']);
 Route::get('/ping', function () {
     return response()->json(['pong' => true]);

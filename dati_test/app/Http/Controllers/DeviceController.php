@@ -12,6 +12,12 @@ class DeviceController extends Controller
         return view('device.index2',['devices'=>$devices]);
     }
 
+    public function viewSensor(){
+        $devices = Device::with('sensor')->get();
+
+        return view('sensor.index', compact('devices'));
+    }
+
     public function edit ($id) {
         $devices = Device:: findOrFail($id);
         return view('device edit', compact ( 'device')) ;
