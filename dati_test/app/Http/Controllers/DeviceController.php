@@ -13,7 +13,13 @@ class DeviceController extends Controller
     }
 
     public function viewSensor(){
-        $devices = Device::with('sensor')->get();
+        $devices = Device::with(['sensor' => function ($query) {
+            $query->whereNotNull('data')
+                  ->where(function($q) {
+                      $q->where('data->temperature', '!=', null)
+                        ->orWhere('data->humidity', '!=', null);
+                  });
+        }])->get();
 
         return view('sensor.index', compact('devices'));
     }
