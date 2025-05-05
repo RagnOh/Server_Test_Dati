@@ -12,7 +12,7 @@ class SensorController extends Controller
         $request->validate([
             'data' => 'required|array'
         ]);
-        $device = Device::find($deviceId);
+        $devices = Device::find($deviceId);
         $sensor = new Sensor([
             'device_id' => $deviceId,
             'data' => json_encode($request->data)
