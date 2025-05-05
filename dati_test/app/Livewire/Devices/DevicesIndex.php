@@ -14,8 +14,10 @@ class DevicesIndex extends Component
     {
         
 
-        return view('livewire.devices.devices-index', [
-            'devices' => $devices,
+        //
+        // return view('livewire.devices.devices-index', [
+        return view('device.index2',[   
+        'devices' => $devices,
         ]);
     }
 }
