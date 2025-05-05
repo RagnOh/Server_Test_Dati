@@ -47,6 +47,9 @@
         {{ $devices->links('pagination::bootstrap-5') }}
       </div>
     </div>
+    <a href="{{ route('sensor.index') }}" class="btn btn-primary mb-3">
+  <i class="bi bi-thermometer-half me-1"></i> Visualizza Sensori
+</a>
   </div>
 
   <!-- Bootstrap JS (optional, for components like modals) -->
