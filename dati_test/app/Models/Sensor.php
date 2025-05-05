@@ -9,7 +9,7 @@ class Sensor extends Model
     protected $fillable = [
        'device_id','data'
     ];
-    protected $cast = [
+    protected $casts = [
          'data' => 'array'
     ];
     public function device(){

@@ -5,9 +5,7 @@ use App\Http\Controllers\Api\SensorReadingController;
 use App\Http\Controllers\SensorController;
 use App\Http\Controllers\DeviceController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [DeviceController::class, 'index']);
 
 Route::middleware([
   'auth:sanctum',
@@ -19,7 +17,7 @@ Route::middleware([
 })->name ( 'dashboard');
 });
 
-Route::get('devices', [DeviceController::class, 'index'])->name('devices.index');
+Route::get('/devices', [DeviceController::class, 'index'])->name('devices.index');
 
 Route::get('/sensor', [DeviceController::class, 'viewSensor'])->name('sensor.index');
 
